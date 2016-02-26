@@ -26,9 +26,11 @@ ZSH_THEME="robbyrussell"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
+ZSH_TMUX_AUTOSTART="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx zsh-syntax-highlighting brew repo sudo knife vagrant bundler web-search docker)
+plugins=(git tmux zsh-syntax-highlighting repo sudo vagrant web-search docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,3 +80,5 @@ if [ -f /usr/bin/vim ]; then
 fi
 
 export TERM="screen-256color"
+
+
