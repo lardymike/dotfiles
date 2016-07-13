@@ -1,5 +1,5 @@
 # Explicitly configured $PATH variable
-PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin:/usr/local/terraform/bin:/usr/local/packer
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -24,13 +24,13 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
-ZSH_TMUX_AUTOSTART="true"
+#ZSH_TMUX_AUTOSTART="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git tmux zsh-syntax-highlighting repo sudo vagrant web-search docker)
+plugins=(aws git tmux zsh-syntax-highlighting repo sudo vagrant web-search docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,6 +79,12 @@ if [ -f /usr/bin/vim ]; then
   export EDITOR=/usr/bin/vim
 fi
 
-export TERM="screen-256color"
+# export TERM="screen-256color"
 
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export WORKON_HOME=$HOME/Envs
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+export GPGKEY=FC0EDE1759E8E371
 
