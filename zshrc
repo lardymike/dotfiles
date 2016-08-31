@@ -88,3 +88,7 @@ fi
 
 export GPGKEY=FC0EDE1759E8E371
 
+# Powerline
+if [[ -r /usr/share/powerline/bindings/zsh/powerline.zsh ]]; then
+  source /usr/share/powerline/bindings/zsh/powerline.zsh
+fi
